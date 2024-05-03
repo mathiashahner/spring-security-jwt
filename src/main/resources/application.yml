@@ -1,11 +1,16 @@
 spring:
   application:
-    name: spring-messaging
+    name: spring-security-jwt
   datasource:
-    url: jdbc:h2:mem:spring-messaging
+    url: jdbc:h2:mem:spring-security-jwt
     driver-class-name: org.h2.Driver
     username: sa
     password: ''
   h2:
     console:
       enabled: true
+api:
+  security:
+    key:
+      public: classpath:app.pub
+      private: classpath:app.key

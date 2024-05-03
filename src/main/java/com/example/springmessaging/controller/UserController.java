@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.springmessaging.dto.UserResponse;
 import com.example.springmessaging.service.UserService;
 
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/user")
 @RequiredArgsConstructor
+@SecurityRequirement(name = "Bearer")
 public class UserController {
 
   private final UserService userService;
